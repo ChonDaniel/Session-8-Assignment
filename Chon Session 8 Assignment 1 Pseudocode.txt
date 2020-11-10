@@ -1,0 +1,23 @@
+function main()
+
+    output "Amount to invest into a CD: "
+    input invest
+    
+    output "What is the interest rate for the CD? "
+    input rate
+    
+    output "What term in years? "
+    input year
+	
+    rate = 100 / rate
+    
+    loop total from 1 to year
+        output "Year " + total
+        output "Starting amount: " + invest
+        interest = invest / rate
+        output "Interest: " + interest
+        invest = interest + invest
+        output "End year balance: " + invest
+    end loop
+
+end function

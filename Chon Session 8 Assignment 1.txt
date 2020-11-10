@@ -1,0 +1,22 @@
+def main():
+    
+    print("Amount to invest into a CD: ")
+    invest = int(input())
+    
+    print("What is the interest rate for the CD? ")
+    rate = int(input())
+    
+    print("What term in years? ")
+    year = int(input())
+    
+    rate = rate / 100
+    
+    for total in range(1, year + 1, 1):
+        print("Year " + str(total))
+        print("Starting amount: " + str(invest))
+        interest = float(invest) * rate
+        print("Interest: " + str(interest))
+        invest = interest + invest
+        print("End year balance: " + str(invest))
+        
+main()
